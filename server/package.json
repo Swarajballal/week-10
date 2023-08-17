@@ -5,7 +5,7 @@
   "main": "03-course-app-medium.js",
   "scripts": {
     "dev": "node index.js",
-    "start": "cd ../admin-client && npm run build && rm -rf ../server/public && mkdir -p ../server/public && mv ./dist/* ../server/public && cd ../server && node index.js"
+    "start": "cd ../admin-client && npm run build && mkdir ..\\server\\public 2>nul && xcopy /s /e /i /y .\\dist ..\\server\\public && cd ../server && node index.js"
   },
   "author": "",
   "license": "ISC",
