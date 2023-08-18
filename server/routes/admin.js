@@ -4,6 +4,7 @@ const { User, Course, Admin } = require("../db");
 const jwt = require('jsonwebtoken');
 const { SECRET } = require("../middleware/auth")
 const { authenticateJwt } = require("../middleware/auth");
+const { afterEach } = require("node:test");
 
 const router = express.Router();
 
@@ -74,3 +75,4 @@ router.post('/signup', (req, res) => {
   });
 
   module.exports = router
+
